@@ -1,0 +1,10 @@
+C:\Users\jock_\OneDrive\Escritorio\pyton\Ejercicios de videos\modulos\dist>pip3 uninstall paquetecalculos
+Found existing installation: paquetecalculos 1.0
+Uninstalling paquetecalculos-1.0:
+  Would remove:
+    c:\users\jock_\appdata\local\programs\python\python310\lib\site-packages\calculos\*
+    c:\users\jock_\appdata\local\programs\python\python310\lib\site-packages\paquetecalculos-1.0-py3.10.egg-info
+Proceed (Y/n)? y
+  Successfully uninstalled paquetecalculos-1.0
+
+C:\Users\jock_\OneDrive\Escritorio\pyton\Ejercicios de videos\modulos\dist>

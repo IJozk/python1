@@ -1,0 +1,60 @@
+Microsoft Windows [Versión 10.0.19044.1645]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\jock_>OneDrive\Escritorio\pyton\Ejercicios de videos
+"OneDrive\Escritorio\pyton\Ejercicios" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\Users\jock_>cd OneDrive
+
+C:\Users\jock_\OneDrive>cd Escritorio
+
+C:\Users\jock_\OneDrive\Escritorio>cd pyton
+
+C:\Users\jock_\OneDrive\Escritorio\pyton>cd Ejercicios de videos
+
+C:\Users\jock_\OneDrive\Escritorio\pyton\Ejercicios de videos>cd modulos
+
+C:\Users\jock_\OneDrive\Escritorio\pyton\Ejercicios de videos\modulos> python setup.py sdist
+running sdist
+running egg_info
+creating paquetecalculos.egg-info
+writing paquetecalculos.egg-info\PKG-INFO
+writing dependency_links to paquetecalculos.egg-info\dependency_links.txt
+writing top-level names to paquetecalculos.egg-info\top_level.txt
+writing manifest file 'paquetecalculos.egg-info\SOURCES.txt'
+reading manifest file 'paquetecalculos.egg-info\SOURCES.txt'
+writing manifest file 'paquetecalculos.egg-info\SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+warning: check: missing required meta-data: url
+
+creating paquetecalculos-1.0
+creating paquetecalculos-1.0\Calculos
+creating paquetecalculos-1.0\paquetecalculos.egg-info
+copying files to paquetecalculos-1.0...
+copying setup.py -> paquetecalculos-1.0
+copying Calculos\__init__.py -> paquetecalculos-1.0\Calculos
+copying Calculos\calculosGenerales.py -> paquetecalculos-1.0\Calculos
+copying paquetecalculos.egg-info\PKG-INFO -> paquetecalculos-1.0\paquetecalculos.egg-info
+copying paquetecalculos.egg-info\SOURCES.txt -> paquetecalculos-1.0\paquetecalculos.egg-info
+copying paquetecalculos.egg-info\dependency_links.txt -> paquetecalculos-1.0\paquetecalculos.egg-info
+copying paquetecalculos.egg-info\top_level.txt -> paquetecalculos-1.0\paquetecalculos.egg-info
+Writing paquetecalculos-1.0\setup.cfg
+creating dist
+Creating tar archive
+removing 'paquetecalculos-1.0' (and everything under it)
+
+C:\Users\jock_\OneDrive\Escritorio\pyton\Ejercicios de videos\modulos>cd dist
+
+C:\Users\jock_\OneDrive\Escritorio\pyton\Ejercicios de videos\modulos\dist>pip3 install paquetecalculos-1.0.tar.gz
+Processing c:\users\jock_\onedrive\escritorio\pyton\ejercicios de videos\modulos\dist\paquetecalculos-1.0.tar.gz
+Using legacy 'setup.py install' for paquetecalculos, since package 'wheel' is not installed.
+Installing collected packages: paquetecalculos
+    Running setup.py install for paquetecalculos ... done
+Successfully installed paquetecalculos-1.0
+WARNING: You are using pip version 21.2.4; however, version 22.0.4 is available.
+You should consider upgrading via the 'C:\Users\jock_\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\jock_\OneDrive\Escritorio\pyton\Ejercicios de videos\modulos\dist>
