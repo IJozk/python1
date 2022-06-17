@@ -26,15 +26,22 @@ miPantalla.config(bg="black", fg="white", justify="right", width=40 ,)
 def pulsarBoton(tecla):
     if numeroPantalla.get()=="0":
         if tecla=="0" or tecla=="+" or tecla=="-" or tecla=="*" or tecla=="/":
-            numeroPantalla.set("0")
+            numeroPantalla.set("0") 
         else:
             numeroPantalla.set(tecla)            
+    elif numeroPantalla.get()=="Math error." or numeroPantalla.get()=="Syntax error.":
+            numeroPantalla.set(tecla)   
     else:        
         numeroPantalla.set(numeroPantalla.get()+tecla)
     
 def calculo():
-    calc=eval(str(numeroPantalla.get()))
-    numeroPantalla.set(str(calc))  
+    try:
+        calc=eval(str(numeroPantalla.get()))
+        numeroPantalla.set(str(calc)) 
+    except ZeroDivisionError:
+        numeroPantalla.set("Math error.")
+    except SyntaxError:
+        numeroPantalla.set("Syntax error.")         
     
 def borrarPantalla():
     numeroPantalla.set("0")      
@@ -98,6 +105,9 @@ botonclc=Button(miFrame, text="C", width=3, command=borrarPantalla)
 botonclc.grid(row=5, column=0, sticky="s",padx=5, pady=5)
 botonclc.config(font=10)
 
+botondiv=Button(miFrame, text=".", width=3, command=lambda:pulsarBoton("."))
+botondiv.grid(row=5, column=4, sticky="s",padx=5, pady=5)
+botondiv.config(font=10)
 
 
 root.mainloop()

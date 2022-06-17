@@ -6,7 +6,7 @@ miFrame=Frame(root, width=800, height=700)
 
 miFrame.pack()
 
-miImagen=PhotoImage(file="tenor.gif")
+miImagen=PhotoImage(file="Desarrollo_ejercicios/tenor.gif")
 
 #para ingresar texto en el label se utiliza text como parametro y para imagenes image.
 

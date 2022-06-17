@@ -23,7 +23,7 @@ def opcionesViaje():
         
     textoFinal.config(text=opcionescogida)            
 
-foto=PhotoImage(file="descarga.png")
+foto=PhotoImage(file="Desarrollo_ejercicios/descarga.png")
 Label(root, image=foto).pack()
 
 frame=Frame(root)

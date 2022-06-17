@@ -6,7 +6,7 @@ raiz.title("Ventana de pruebas.")
 
 raiz.resizable(1,1) #Habilitar redimensionar
 
-raiz.iconbitmap("freek.ico")
+raiz.iconbitmap("Desarrollo_ejercicios/freek.ico")
 
 #raiz.geometry("650x350") #dar tamaño a la raiz
 
