@@ -69,7 +69,7 @@ def insertUser(user):
             
         cursor1=miConexion.cursor()
             
-        cursor1.execute(f"{user}")
+        cursor1.execute("INSERT INTO CLIENTE(USUARIO , PASS, NOMBRE_COMPLETO, DIRECCION, COMENTARIOS) VALUES (?,?,?,?,?)",user)
             
         miConexion.commit()
             
@@ -106,7 +106,7 @@ def modificar(datos_cliente):
             
         cursor1=miConexion.cursor()
             
-        cursor1.execute(f"UPDATE cliente SET usuario='{datos_cliente[1]}', pass='{datos_cliente[2]}', nombre_completo='{datos_cliente[3]}', direccion='{datos_cliente[4]}', comentarios='{datos_cliente[5]}' WHERE ID='{datos_cliente[0]}';")
+        cursor1.execute(f"UPDATE cliente SET usuario=?, pass=?, nombre_completo=?, direccion=?, comentarios=? WHERE ID=?;",datos_cliente)
         
         datosUsuario=cursor1.fetchall()
             

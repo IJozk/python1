@@ -19,7 +19,7 @@ def borrarRegistro():
         cuadroComentarios.delete('1.0', 'end-1c') 
 def insertarUser():
     try:
-        datos=f"INSERT INTO CLIENTE(USUARIO , PASS, NOMBRE_COMPLETO, DIRECCION, COMENTARIOS) VALUES ('{var_user.get()}','{var_pass.get()}','{var_nom.get()}','{var_dir.get()}','{cuadroComentarios.get('1.0', 'end-1c')}');"
+        datos=var_user.get(),var_pass.get(),var_nom.get(),var_dir.get(),cuadroComentarios.get('1.0', 'end-1c')
         insertUser(datos)
         borrarRegistro()
     except:
@@ -33,13 +33,7 @@ def buscarUser(usuario):
     cuadroComentarios.delete('1.0', 'end-1c')
     cuadroComentarios.insert(END, f"{datos_usuario[0][5]}")  
 def modificarUser():
-    datos_cliente=[]
-    datos_cliente.append(var_id.get())
-    datos_cliente.append(var_user.get())
-    datos_cliente.append(var_pass.get())
-    datos_cliente.append(var_nom.get())
-    datos_cliente.append(var_dir.get())
-    datos_cliente.append(cuadroComentarios.get('1.0', 'end-1c'))
+    datos_cliente=var_user.get(),var_pass.get(),var_nom.get(),var_dir.get(),cuadroComentarios.get('1.0', 'end-1c'),var_id.get()
     modificar(datos_cliente) 
     borrarRegistro()   
 def borrarUser():
@@ -107,6 +101,7 @@ label3.grid(column=0, row=2)
 var_pass=StringVar()
 entryPass=Entry(frame1, width=40, textvariable=var_pass)
 entryPass.grid(column=1, row=2, columnspan=4, padx=20, pady=2)
+entryPass.config(show="*")
 
 label4=Label(frame1, fg="blue", text="Nombre comp:", width=10, height=2)
 label4.grid(column=0, row=3)
